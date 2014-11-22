@@ -19,6 +19,12 @@ BOARD_KERNEL_CMDLINE := console=ttyMT0,921600n1 vmalloc=496M slub_max_order=0 lc
 BOARD_KERNEL_BASE := 0x10008000
 BOARD_KERNEL_PAGESIZE := 2048
 
+# kernel
+TARGET_PREBUILT_KERNEL := device/alps/lcsh92_wet_jb9/kernel
+# TARGET_NO_FACTORYIMAGE := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+USE_CAMERA_STUB := true
+
 # partition info
 # fix this up by examining /proc/emmc on a running device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -72,10 +78,5 @@ endif
 # EGL
 BOARD_EGL_CFG := $(DEVICE_FOLDER)/egl.cfg
 
-# kernel
-TARGET_PREBUILT_KERNEL := device/alps/lcsh92_wet_jb9/kernel
-TARGET_NO_FACTORYIMAGE := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-USE_CAMERA_STUB := true
 
 
